@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#e9f7ea", "tertiary-fixed": "#ffdad6", "on-primary-container": "#004104", "error": "#ba1a1a", "tertiary": "#b72020", "secondary-fixed": "#cfe9cf", "primary": "#006e0b", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "outline-variant": "#bdcbb5", "on-primary-fixed-variant": "#005306", "secondary-fixed-dim": "#b4cdb4", "surface-variant": "#d8e6d9", "background": "#effdef", "on-secondary-fixed": "#0b2010", "primary-container": "#2eb82e", "outline": "#6e7b68", "error-container": "#ffdad6", "on-surface-variant": "#3e4a39", "surface-bright": "#effdef", "secondary": "#4d644f", "on-primary": "#ffffff", "surface-dim": "#d0ded1", "surface-container-high": "#deecdf", "surface-container": "#e4f2e4", "on-background": "#131e16", "surface": "#effdef", "on-secondary": "#ffffff", "on-tertiary-fixed": "#410002", "surface-tint": "#006e0b", "on-primary-fixed": "#002201", "on-surface": "#131e16", "on-error-container": "#93000a", "inverse-surface": "#27332a", "on-tertiary-fixed-variant": "#93000c", "tertiary-fixed-dim": "#ffb4ab", "tertiary-container": "#ff7569", "on-tertiary-container": "#750008", "primary-fixed-dim": "#5ce153", "secondary-container": "#cde7cc", "inverse-primary": "#5ce153", "primary-fixed": "#79fe6c", "surface-container-highest": "#d8e6d9", "inverse-on-surface": "#e7f4e7", "on-secondary-container": "#516853", "on-secondary-fixed-variant": "#364c38" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "margin-desktop": "3rem", "space-xl": "2.5rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-xs": "0.25rem", "margin-tablet": "2rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Be Vietnam Pro"], "title-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,41,24,0.04)]"><div class="h-28 max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md pt-space-xs"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs" data-path="marketplace-home" href="#"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[22px]">eco</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold leading-none">Greeny</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Eco Thailand</span></div></a><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full text-on-secondary-fixed"><span class="font-body-sm text-body-sm">🇹🇭 ไทย | บาท (THB)</span><span class="material-symbols-outlined text-[16px] text-outline">keyboard_arrow_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center w-full h-11 bg-surface-container-low rounded-full px-space-md shadow-inner"><span class="material-symbols-outlined text-outline mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="ค้นหาบรรจุภัณฑ์รักษ์โลก, ผักตบ, ฟางข้าว..." type="text"/><button aria-label="Search with camera" class="flex items-center justify-center text-secondary hover:text-primary transition-colors pr-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button><button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors font-bold ml-space-xs shadow-sm" type="button">ค้นหา</button></div></div><div class="flex items-center gap-space-md"><a class="hidden lg:flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">คำสั่งซื้อ</span></a><a class="relative flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_cart</span><span class="font-label-md text-label-md hidden sm:inline">รถเข็น</span><span class="absolute -top-1.5 -right-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full min-w-[18px] text-center shadow-sm">12</span></a><a class="hidden md:flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="seller-portal" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md text-label-md">เปิดร้านค้า</span></a><button aria-label="Notifications" class="relative text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 bg-tertiary rounded-full"></span></button><a class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/40" data-path="user-profile" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">ยินดีต้อนรับ</span><span class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors leading-tight">ลงชื่อเข้าใช้ / บัญชีฉัน</span></div></a></div></div><div class="w-full flex items-center justify-between overflow-x-auto pb-space-xs"><nav class="flex items-center gap-space-xs whitespace-nowrap" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-full"><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="categories" href="#">หมวดหมู่สินค้า</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="best-sellers" href="#">สินค้าขายดี</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="greeny-lives" href="#">Greeny Lives</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="greeny-review" href="#">Greeny Review</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="flash-deals" href="#">Force Sales (ดีลพิเศษ)</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="free-shipping" href="#">ส่งฟรีทั่วไทย</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="help-center" href="#">ช่วยเหลือ/ติดต่อเรา</a></nav><div class="hidden lg:flex items-center gap-space-xs bg-secondary-container px-space-sm py-0.5 rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">verified</span><span class="font-label-sm text-label-sm text-on-secondary-container">บรรจุภัณฑ์ย่อยสลายได้ 100%</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mb-space-md overflow-x-auto whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>หน้าแรก</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">บรรจุภัณฑ์รักษ์โลก</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">วัสดุกันกระแทก</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-label-md text-label-md truncate max-w-[280px] sm:max-w-none">ผักตบชวากันกระแทก ย่อยสลายได้ 100%</span>
+</nav>
+<!-- Top Section: 2-Column Product Detail Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-gutter-desktop items-start">
+<!-- Left Column: Media Gallery (5 cols on lg) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Main Media Container -->
+<div class="relative w-full aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Premium organic water hyacinth cushioning wrap mockup, sunlit studio tabletop setting, crisp natural fibers woven cleanly into a bubble wrap alternative, sustainable earthy aesthetic, pale emerald botanicals in soft focus background, daylight high key photography, 8k resolution" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhISaSSxhxXtfU_O3YPrugFKWplWyjHE0KIWPFHTTi1X9O8JLvq9thpNRPXXhKCOGQuVmvXwt2skbFJ_4GqKtY9BsQzn8a0gJmeMFyd261CmhUHqKmA1rZw95RuU5aBjpzvb4wfWx8hmI14rAiWJZ7aIoQsuDMSaSWSo3BrP4aBYHDQuk9-8VQgNj_MOd-_vX1HPGoPIiLzlwr0maOsGqiiWuGSLTaFqQgW9Wi_IPw5-JkGGuxtYm"/>
+<!-- Floating Eco Badge -->
+<div class="absolute top-space-md left-space-md bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md px-space-md py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-md text-label-md font-bold tracking-tight">🌿 รักษ์โลก 100% ย่อยสลายได้ในธรรมชาติ</span>
+</div>
+<!-- Zoom Preview Trigger Icon -->
+<button aria-label="ขยายภาพ" class="absolute bottom-space-md right-space-md w-10 h-10 rounded-full bg-surface-container-lowest/90 text-on-surface flex items-center justify-center shadow-md hover:bg-surface-container-lowest hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+</div>
+<!-- Thumbnails Gallery -->
+<div class="grid grid-cols-4 gap-space-sm" id="thumb-gallery">
+<button class="thumb-btn active relative aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm transition-all ring-2 ring-primary" onclick="selectThumb(0, this)" type="button">
+<img class="w-full h-full object-cover" data-alt="Wide shot of water hyacinth packaging sheet rolled neatly on a white recycled craft paper background with natural botanical shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm-NJShFpUNYrA3lSOinpP2GpHRBTovWTP1_0cedS6LWs50X4wFuDVbKoN2v2PQYER7PlxyvwLihhfqO3cTz5orRqkUzLAwyANOfheiW2tBdc-ybJy01b9K5X9Kap6UAv53TVBTqB6eLXrc0y_Da9rESj6Inh8e1KwMMlASy1yFiLerG31VN71dfNRHghCqHmwyvyf-d07eahj86-gNrDnXUSumUnxCWM9pYpBX-Wb_ymnfaQQvyH-"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm text-center py-0.5">มุมกว้าง</span>
+</button>
+<button class="thumb-btn relative aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm transition-all hover:opacity-90" onclick="selectThumb(1, this)" type="button">
+<img class="w-full h-full object-cover" data-alt="Extreme macro close up shot of water hyacinth plant fiber cellular structure, dry golden amber fiber texture, sustainable unbleached cellular pockets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZggnQGJa0KOIg40YfcoRbEn8QgOvYWk1jRjKnESM00Dg6ewoxBso4Ar96Wj1PO81ccJMK0DHsyN539nZTLqqjMYvRML-wwce2rNQbM_k9-9GwLNkMaLJSm28rgam2ZPI1ot-6sY_Rto6lBfjSBz6g4Joxcqld4CxjfnLu_oI0fScSzGUmeTG87lr90jblz1NFn-yy1f4E7Ex2OQqzsieRJ6GV4oLEaeyTw2lHyy1faLGKSdNtnYqk"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm text-center py-0.5">ซูมเส้นใย</span>
+</button>
+<button class="thumb-btn relative aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm transition-all hover:opacity-90" onclick="selectThumb(2, this)" type="button">
+<img class="w-full h-full object-cover" data-alt="Water hyacinth cushioning wrap folded snugly inside an eco-friendly corrugated shipping box with fragile ceramic cups displayed neatly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN6H_JngNKeZHBjSoPiy1tcuSXo5p2vLi564Ld_pz921Hu4I9JES0HNVSyg-eRAVWoYq3I24lp2amCu4sBLIclJYLKW246WOetei6R9Ebz8i927V4CX_iOJpbLDpBEo5P46UmrML8JUJqKXZ2AqjEDbKD8pPLu7qiiN_juMJJdZVyj3ItJG3NJY2PRHEdWNzMaGrjpIn1gLPgYYAuUgHr-lrCtQxJoxmrDJM-6jwETPZ9XjqTLxOGD"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm text-center py-0.5">เทียบขนาด</span>
+</button>
+<button class="thumb-btn relative aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm transition-all hover:opacity-90" onclick="selectThumb(3, this)" type="button">
+<img class="w-full h-full object-cover" data-alt="Water hyacinth fiber breaking down in rich organic compost soil with small green seedlings sprouting, illustrating complete zero waste biodegradability" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrv4Py82xsBFaATV3No_V5pR5ShWsjCM5hfuxU9NfIxxNY7GS7Y-uI6CVwdAhcXzyGc3Ar_TsWUf7BEbsBU7OD7MLS8oNHYtoIPF1twPZ3QpV8mLWXUUvZuXX261LkGNSL71crbsAXoB_4Gextmi-CTOfCWOQesSo1Yz08CsAgALFYjcn27--ak-XLIwXoMY3AzQxznoCGrX45Xe2aQ6YdUThvwEfj_bwUu-7nAPNZcgx856V08bik"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm text-center py-0.5">การย่อยสลาย</span>
+</button>
+</div>
+<!-- Trust Badges Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-around text-center">
+<div class="flex flex-col items-center gap-1">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">compost</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">ย่อยสลาย 45 วัน</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">กันแตก 100%</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">วิสาหกิจชุมชนไทย</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Purchase Summary & Details (7 cols on lg) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm">
+<!-- Shop Ribbon -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Greeny BioPack Official</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> MALL
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">คะแนนร้าน 4.9/5 • อัตราการตอบกลับ 99%</span>
+</div>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>แชทเลย</span>
+</button>
+</div>
+<!-- Product Title -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface font-extrabold leading-snug">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full inline-block align-middle mr-1.5 font-bold uppercase">MALL</span>
+            ผักตบชวากันกระแทก ย่อยสลายได้ 100% ทดแทนพลาสติกบับเบิ้ล เหนียวนุ่ม ซับแรงกระแทกเยี่ยม
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            ผลิตจากผักตบชวาธรรมชาติผ่านกระบวนการฆ่าเชื้อด้วยความร้อน ไร้กลิ่นอับ ปลอดภัยต่ออาหารและสิ่งแวดล้อม
+          </p>
+</div>
+<!-- Ratings & Social Proof -->
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 py-space-xs text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low/50 px-space-md rounded-lg">
+<div class="flex items-center gap-1 text-primary">
+<span class="font-label-lg text-label-lg text-on-surface font-bold underline">4.9</span>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-colors ml-1" href="#reviews-section">(840 รีวิว)</a>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface font-label-md text-label-md">ขายแล้ว 1 พัน+ ชิ้น</span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>🇹🇭 ส่งจาก นครปฐม, ประเทศไทย</span>
+</div>
+</div>
+<!-- Price Block -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-md">
+<div class="flex items-baseline gap-1 text-primary font-headline-lg text-headline-lg font-black">
+<span>฿</span><span id="price-display">45</span>
+</div>
+<span class="text-outline line-through font-body-lg text-body-lg">฿50</span>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-md text-label-md px-2 py-0.5 rounded-full font-bold">
+              ลด -10%
+            </span>
+</div>
+<!-- Promo Tags -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> ซื้อ 3 ชิ้น ลดเพิ่ม 10%
+            </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">confirmation_number</span> โค้ดส่วนลดร้านค้าลด ฿10
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-space-sm py-0.5 rounded">
+              ส่งฟรีเมื่อซื้อครบ ฿299
+            </span>
+</div>
+</div>
+<!-- Options Selector -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Size Options -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">เลือกขนาดแผ่นกันกระแทก:</span>
+<span class="font-body-sm text-body-sm text-primary cursor-pointer hover:underline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">straighten</span> ตารางเทียบขนาด
+              </span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm" id="size-selector">
+<button class="size-btn active flex flex-col items-center p-space-sm rounded-lg bg-surface-container-low ring-2 ring-primary text-on-surface text-center transition-all" onclick="selectSize('30x50', 45, this)" type="button">
+<span class="font-label-md text-label-md font-bold">30 x 50 cm</span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">แนะนำสุดคุ้ม</span>
+</button>
+<button class="size-btn flex flex-col items-center p-space-sm rounded-lg bg-surface-container text-on-surface-variant text-center hover:bg-surface-container-high transition-all" onclick="selectSize('50x100', 85, this)" type="button">
+<span class="font-label-md text-label-md font-bold">50 x 100 cm</span>
+<span class="text-outline font-label-sm text-label-sm">สำหรับกล่องกลาง</span>
+</button>
+<button class="size-btn flex flex-col items-center p-space-sm rounded-lg bg-surface-container text-on-surface-variant text-center hover:bg-surface-container-high transition-all" onclick="selectSize('100x100', 160, this)" type="button">
+<span class="font-label-md text-label-md font-bold">100 x 100 cm</span>
+<span class="text-outline font-label-sm text-label-sm">แพ็คใหญ่เหมาม้วน</span>
+</button>
+</div>
+</div>
+<!-- Quantity Selector -->
+<div class="flex items-center justify-between py-space-xs">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">จำนวน:</span>
+<span class="font-body-sm text-body-sm text-secondary">มีสินค้าในสต็อก 850 ชิ้น</span>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-full p-1 shadow-inner">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors shadow-sm" onclick="adjustQty(-1)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-12 text-center font-title-sm text-title-sm text-on-surface font-bold select-none" id="qty-count">1</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors shadow-sm" onclick="adjustQty(1)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-sm">
+<button class="relative overflow-hidden flex items-center justify-center gap-space-xs bg-surface-container-low hover:bg-secondary-container text-primary font-label-lg text-label-lg py-3 px-space-md rounded-full font-bold shadow-sm transition-all group" onclick="flyToCart()" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5">add_shopping_cart</span>
+<span>+ เพิ่มไปยังรถเข็น</span>
+<span class="absolute w-2 h-2 rounded-full bg-primary opacity-0 pointer-events-none" id="cart-ripple"></span>
+</button>
+<button class="flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-lg text-label-lg py-3 px-space-md rounded-full font-bold shadow-md hover:shadow-lg transition-all group" type="button">
+<span>ซื้อสินค้าเลย</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<!-- Share & Favorite Row -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-1.5 hover:text-tertiary transition-colors group" onclick="toggleFavorite(this)" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform" id="fav-icon">favorite_border</span>
+<span id="fav-text">บันทึกเป็นสินค้าโปรด (1.4k)</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-primary transition-colors" onclick="shareProduct()" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span>แชร์ไปยังโซเชียล</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>รับประกันคืนเงินหากเสียหาย</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Review & Details Tabs -->
+<div class="mt-space-xl flex flex-col gap-space-md" id="reviews-section">
+<!-- Tab Navigation -->
+<div class="flex items-center gap-space-xs border-b-0 bg-surface-container-lowest p-1.5 rounded-full shadow-sm max-w-fit overflow-x-auto">
+<button class="main-tab px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" onclick="switchMainTab('details', this)" type="button">
+          รายละเอียดสินค้า
+        </button>
+<button class="main-tab active px-space-lg py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition-all flex items-center gap-1.5" onclick="switchMainTab('reviews', this)" type="button">
+<span>รีวิวคะแนน</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>(840)</span>
+</button>
+<button class="main-tab px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" onclick="switchMainTab('ugc', this)" type="button">
+          รีวิวจากที่อื่น (External UGC)
+        </button>
+<button class="main-tab px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" onclick="switchMainTab('shipping', this)" type="button">
+          นโยบายการจัดส่ง
+        </button>
+</div>
+<!-- Reviews Content Panel -->
+<div class="flex flex-col gap-space-lg" id="tab-reviews">
+<!-- Score Overview & Filter Card -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col lg:flex-row gap-space-lg items-center">
+<!-- Left Score Pillar -->
+<div class="flex flex-col items-center justify-center text-center lg:border-r-0 lg:pr-space-xl min-w-[200px]">
+<div class="flex items-baseline gap-1 text-primary">
+<span class="font-display-lg text-display-lg font-black leading-none">4.9</span>
+<span class="font-title-md text-title-md text-outline">/ 5</span>
+</div>
+<div class="flex text-amber-500 my-1">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">อิงจากผู้ซื้อที่ยืนยันตัวตน 840 ราย</span>
+</div>
+<!-- Right Interactive Filter Bar -->
+<div class="flex-1 flex flex-col gap-space-sm w-full">
+<span class="font-label-md text-label-md text-on-surface font-bold">คัดกรองความคิดเห็น:</span>
+<div class="flex flex-wrap gap-space-xs" id="review-filters">
+<button class="rev-filter-btn active bg-primary text-on-primary font-label-md text-label-md px-space-md py-1.5 rounded-full font-bold shadow-sm" onclick="filterReviews('all', this)" type="button">
+                ทั้งหมด (840)
+              </button>
+<button class="rev-filter-btn bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors flex items-center gap-1" onclick="filterReviews('5star', this)" type="button">
+<span>ระบุ 5 ดาว (720)</span>
+<span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="rev-filter-btn bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors flex items-center gap-1" onclick="filterReviews('media', this)" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">photo_camera</span>
+<span>รูปภาพ/วิดีโอ (68)</span>
+</button>
+<button class="rev-filter-btn bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors flex items-center gap-1" onclick="filterReviews('shipping', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>รีวิวเรื่องการขนส่ง</span>
+</button>
+<button class="rev-filter-btn bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors flex items-center gap-1" onclick="filterReviews('quality', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>คุณภาพสินค้า</span>
+</button>
+<button class="rev-filter-btn bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors flex items-center gap-1" onclick="filterReviews('service', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>การบริการร้านค้า</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2 Rows x 3 Columns Desktop Media Review Grid -->
+<div class="flex flex-col gap-space-lg">
+<!-- ROW 1: Photogenic Media Reviews (รูปถ่ายสวย) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">photo_library</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">รีวิวพร้อมรูปถ่ายใช้งานจริง</h3>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">คัดเลือกโดยระบบ Greeny AI Verifier</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Handmade glass wine goblet securely enveloped in fibrous water hyacinth wrap sitting safely inside a cardboard box, clean high key photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeWIdB5Yzg_Jssuq8P-TKY26WICv_G-SHWi0YU4KdpuSLM-51VDeGUyQ7aFvhxzzbIfO9_tgTYGRxsLzrLhkoWwRNmhTi1qEBOZnKaJPMpum1QPvWXNsFs76wG01L5GJe_xfjqOYSTO2QXVlUyd-LGRzF7Jl8bmFbTT2gF7r_8OlvahKcaPeda1sfpYuKV47DVxU6IJ2kuSq-aiO5r2quD4siDY4c6kr2OPyvwAveJ4M608CsO2wf5"/>
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">image</span> 1/3
+                  </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>ผู้ซื้อจริง</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      ใช้งานดีมาก กันกระแทกได้จริง ห่อแก้วไม่แตกเลย
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      ตอนแรกกังวลว่าจะกันแก้วแตกได้ไหม สรุปส่งไปรษณีย์ไปเชียงใหม่ลูกค้าได้รับปลอดภัย เส้นใยหนานุ่มไม่มีกลิ่นสาบเลยค่ะ
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">N</div>
+<span class="font-label-md text-label-md text-on-surface">nit***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 342)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">342</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up of dry clean woven water hyacinth cushioning with no dust, aesthetic botanical product presentation next to organic cosmetic glass bottles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDGsp6zkqz1fobWVWPvUsdya2euJLg5mmWsotLQbXLuIPLXVirtQsK_VCfVPT4_o4Tlbd4oCJ5N3NH_JmbAKSquH3f4DX3OlO8nhDRqhDstX7l8xgajo0z1zclP7bs-Q-elb4E6tJS5yxRwOFP7_HWXEHY6RkZxOrh7nM5o1CFjwoX29DdwvW93FSjkJ4Llcmgcf7WImiOz-0bv1E6kJ0k2GqCbtXLOQFPy4teJ4egBcIRwhtt5UUo"/>
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">image</span> 1/2
+                  </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>ผู้ซื้อจริง</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      แพ็คเกจสะอาด ไร้กลิ่นอับ สวยงามมาก
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      เอามาแพ็คสินค้าสกินแคร์ออร์แกนิค ลูกค้าชมทุกคนว่าเปิดกล่องมาแล้วมู้ดดีมาก ไม่ต้องใช้บับเบิ้ลพลาสติกอีกต่อไป
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">M</div>
+<span class="font-label-md text-label-md text-on-surface">mee***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 189)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">189</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Multiple stacked boxes with water hyacinth eco packing materials ready for delivery in a modern boutique warehouse, green branding aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrXExhDxOo4SxC5nQhWPOBHMKFOW-aWh4vmO1byQSULsrxfiSxg3XiZzUlhJ9pMx4G7DTOvmMfGwfUcCodO-M2WcmuROIUh-TRife7TxnCpnzePxodK3VBrBfEYFkq-9zbISxn7Kj6RL9kOyh5MMhqXUBe25YeRywRduZ3_Y8U2oWsP4qD2gY-lza4O7tEI8lPqcT_unXeFnUYvpQQT-MSEkpN1KFa-YVqEiH6eWa6ZRZqz6clVHk"/>
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">image</span> 1/4
+                  </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>ผู้ซื้อจริง</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      สั่งซ้ำรอบที่สองแล้ว แนะนำสำหรับร้านค้าสายกรีน
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      ขนส่งไว ร้านค้าให้คำปรึกษาดี ขนาด 50x100 ตัดแบ่งใช้สะดวกมาก ช่วยเพิ่มมูลค่าแบรนด์รักษ์โลกได้ชัดเจน
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">P</div>
+<span class="font-label-md text-label-md text-on-surface">pol***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 255)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">255</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 2: Video UGC Reviews (วิดีโอสวย) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">videocam</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">วิดีโอทดสอบประสิทธิภาพและการย่อยสลาย</h3>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">คลิกเพื่อรับชมคลิปสั้น</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Card 4 (Video) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer" onclick="playVideoModal('0:24', 'ทดสอบทิ้งไข่ไก่ ไม่แตกเลย! เหนียวนุ่ม')">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Video freeze frame of hands wrapping a raw brown egg inside fibrous hyacinth wrap and dropping it onto a hard floor, dynamic demonstration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL11HaQs3w2IKuuLdIqnjl3N_NUH4cFn0atfESBAPHARvO0-ZdGxneCN-tVAOSRv93BZ6Ts9pW01XZ5F_lucueE8Xfz6HJZdFFioImgERH_s9DVY3MNXvQ9Xrdmum_VArtQ7oeHfP9-eFtTFN73OT-uL60LBZFg62gL42NWVTQkFhRSqWYYacBvuTj-gv9Co1CpkNHl7SQnpilmh3r1k7Lgv1LXjEuLYJWZCv_bH5hAe7-8j2eW7FW"/>
+<!-- Video Duration Pill -->
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">play_circle</span> 0:24
+                  </div>
+<!-- Big Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-inverse-surface/20 group-hover:bg-inverse-surface/30 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      ทดสอบทิ้งไข่ไก่ ไม่แตกเลย! เหนียวนุ่ม
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      อัดคลิปทดสอบโยนไข่ไก่จากความสูง 1.5 เมตร ห่อ 2 ชั้น รอดสนิท ไม่มีรอยร้าว ทึ่งในพลังซับแรงของผักตบชวามากๆ
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs" onclick="event.stopPropagation()">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">S</div>
+<span class="font-label-md text-label-md text-on-surface">som***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 1200)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">1.2k</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5 (Video) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer" onclick="playVideoModal('0:45', 'วิธีแช่น้ำย่อยสลายเป็นปุ๋ยบำรุงดิน')">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Video freeze frame showing water hyacinth wrap placed in a garden plant pot, soaking in water and dissolving into natural organic mulch fertilizer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHkLXqrdXRc8oYdmRanBESPceSptcOevm9mHPn7Hkc0lB9T-KzbN_c9Yre5XuWS5MpdSQfxG96nXGYijRXK45KG3uHttIS2-cwAD6C3FWmFqhoYG2nbcarghmu5CUMCEm2U7WGyVjfEri0YxLv6kEV3nLFt1R5E8tht_OoewH4cdyema4KOw4kZ-ETtBJepZDxePj7BowOK_rsmtiLCnjw96gyGJ_njjhRfD2Sj_PRPnxj3NRwF6yz"/>
+<!-- Video Duration Pill -->
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">play_circle</span> 0:45
+                  </div>
+<!-- Big Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-inverse-surface/20 group-hover:bg-inverse-surface/30 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      วิธีแช่น้ำย่อยสลายเป็นปุ๋ยบำรุงดิน
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      แกะพัสดุเสร็จแล้วอย่าทิ้ง! เอามาฉีกแช่น้ำ รดโคนต้นไม้ เป็นปุ๋ยอินทรีย์ชั้นยอด ต้นไม้โตไว ดินร่วนซุย ดีงามสุดๆ
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs" onclick="event.stopPropagation()">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">P</div>
+<span class="font-label-md text-label-md text-on-surface">pra***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 890)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">890</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6 (Video) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer" onclick="playVideoModal('1:02', 'คุ้มราคามาก ประหยัดงบร้านค้าได้เยอะ')">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Video freeze frame of small business owner calculating packing costs on a digital tablet next to rows of neatly packed eco friendly parcel boxes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbC9LwisVCGUt4XhUIiJc_6NxChdemaULgyxkTBtCIux3NltxIUKIVp6_uvfRi4kOs1JyyiyEkilxL-z2Ob0Xu4ckwa4eY_kQDUrFtzAuY6Cy6DzxN0mWPmRajYIcnm6X4QQ7c6mKsxSdMkSLRIMGZ0EIY9lzQvF2QPEsyRfqN5GoVwWBKoCDXHVDI0n5FkPdxjFQt3yhu1WQBn9YkRtt0fNUv_YyaGA1lfs4dNWvYQpb1rcliUFrD"/>
+<!-- Video Duration Pill -->
+<div class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">play_circle</span> 1:02
+                  </div>
+<!-- Big Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-inverse-surface/20 group-hover:bg-inverse-surface/30 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight line-clamp-1">
+                      คุ้มราคามาก ประหยัดงบร้านค้าได้เยอะ
+                    </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      แชร์ตัวเลขคำนวณต้นทุนให้ดูเลยครับ ใช้โปรลด 3 ชิ้น 10% ประหยัดกว่าบับเบิ้ลพลาสติกเกรดหนา แถมลดขยะโลก
+                    </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 bg-surface-container-low/40 -mx-space-md -mb-space-md px-space-md py-space-xs" onclick="event.stopPropagation()">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">A</div>
+<span class="font-label-md text-label-md text-on-surface">art***</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-tertiary transition-colors" onclick="likeReview(this, 410)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm like-count">410</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">แสดงรีวิว 1 - 6 จากทั้งหมด 840 รายการ</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-secondary-container transition-colors disabled:opacity-50" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold" type="button">1</button>
+<button class="w-8 h-8 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">2</button>
+<button class="w-8 h-8 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">3</button>
+<span class="text-outline font-label-sm text-label-sm px-1">...</span>
+<button class="w-8 h-8 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">140</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-secondary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Other Mock Tab Panels -->
+<div class="hidden bg-surface-container-lowest p-space-xl rounded-xl shadow-sm" id="tab-details">
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-space-md">รายละเอียดคุณสมบัติสินค้า</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex flex-col gap-2">
+<p><strong>ชื่อผลิตภัณฑ์:</strong> ผักตบชวากันกระแทก Greeny BioPack</p>
+<p><strong>วัตถุดิบ:</strong> ลำต้นผักตบชวาธรรมชาติ 100% จากแหล่งน้ำชุมชนไทย</p>
+<p><strong>กระบวนการผลิต:</strong> ล้าง อบฆ่าเชื้อด้วยไอน้ำร้อน 120°C ปลอดสารฟอกขาว</p>
+</div>
+<div class="flex flex-col gap-2">
+<p><strong>การย่อยสลาย:</strong> 45-60 วันตามธรรมชาติ สามารถทิ้งลงแปลงผักเป็นปุ๋ยได้</p>
+<p><strong>อายุการเก็บรักษา:</strong> 12 เดือน ในที่แห้งและพ้นจากความชื้น</p>
+<p><strong>มาตรฐานรับรอง:</strong> Bio-Degradable Certified &amp; Plastic-Free Standard</p>
+</div>
+</div>
+</div>
+<div class="hidden bg-surface-container-lowest p-space-xl rounded-xl shadow-sm text-center" id="tab-ugc">
+<span class="material-symbols-outlined text-[48px] text-primary mb-2">campaign</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-1">ฟีดรีวิวจาก TikTok &amp; Instagram (#GreenyBioPack)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">กำลังรวบรวมคลิปรีวิวครีเอเตอร์และผู้ประกอบการกว่า 3,200 คลิป</p>
+</div>
+<div class="hidden bg-surface-container-lowest p-space-xl rounded-xl shadow-sm" id="tab-shipping">
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-space-sm">นโยบายการจัดส่งสีเขียว (Green Delivery)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          เราจัดส่งด้วยยานพาหนะไฟฟ้า (EV Fleet) ในเขตกรุงเทพฯ และปริมณฑล พร้อมใช้เทปกาวกระดาษคราฟท์ย่อยสลายได้ 100% ไม่ปะปนพลาสติก จัดส่งถึงปลายทางภายใน 1-3 วันทำการ
+        </p>
+</div>
+</div>
+</div>
+<!-- Video Lightbox / Dialog Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/80 backdrop-blur-sm hidden items-center justify-center p-space-md" id="video-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl flex flex-col">
+<div class="p-space-md flex items-center justify-between border-b-0 bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">videocam</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold truncate max-w-xs" id="modal-video-title">วิดีโอรีวิว</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-error transition-colors" onclick="closeVideoModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative aspect-video bg-inverse-surface flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Video player view showing full motion test of water hyacinth cushioning material dropping fragile objects, rich botanical lighting, high clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7jvi5FDxPAMezBsNlF3oQJywb425Bt9JPqxTwmZuqiLygi7O0uTY_Tv2B7H-5GQiHHsljIoQXQf2EhJTHQ8CIy_2QnUTc-9zvy_U7st4GOAk5FGG6mfJFJnqWKbo-SKnGWW1RiW37TP8RlSIB9LfWfj6r5CmtqX5Hij_YTcU0IXYsBmyzl-CQYYyHx76ToHqT-P1_ZASL7DRXNvFiQVrPNRpqrl9VQJJEdgID43canf7QfrHpIFXO"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl hover:scale-105 transition-transform" type="button">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-secondary">ความยาว: <span id="modal-video-len">0:24</span></span>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-lg py-1.5 rounded-full font-bold" onclick="closeVideoModal()" type="button">
+          ปิดหน้าต่าง
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py- space-sm rounded-full shadow-2xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="app-toast">
+<span class="material-symbols-outlined text-primary-fixed" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-msg">เพิ่มลงในรถเข็นสำเร็จ</span>
+</div>
+</div>
+<script>
+  // Product state management
+  let currentQty = 1;
+  let currentPrice = 45;
+  let isFavorite = false;
+
+  // Thumbnail Switcher
+  function selectThumb(index, btnElement) {
+    document.querySelectorAll('#thumb-gallery .thumb-btn').forEach(btn => {
+      btn.classList.remove('ring-2', 'ring-primary', 'active');
+    });
+    btnElement.classList.add('ring-2', 'ring-primary', 'active');
+    
+    const mainImg = document.getElementById('main-product-img');
+    const thumbImg = btnElement.querySelector('img');
+    if (mainImg && thumbImg) {
+      mainImg.src = thumbImg.src;
+      mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt') || 'Product detail view');
+    }
+  }
+
+  // Size Selector
+  function selectSize(sizeCode, price, btnElement) {
+    document.querySelectorAll('#size-selector .size-btn').forEach(btn => {
+      btn.classList.remove('ring-2', 'ring-primary', 'active', 'bg-surface-container-low');
+      btn.classList.add('bg-surface-container');
+    });
+    btnElement.classList.add('ring-2', 'ring-primary', 'active', 'bg-surface-container-low');
+    btnElement.classList.remove('bg-surface-container');
+
+    currentPrice = price;
+    const priceDisplay = document.getElementById('price-display');
+    if (priceDisplay) {
+      priceDisplay.textContent = price;
+    }
+    showToast('เลือกขนาด ' + sizeCode + ' cm เรียบร้อย');
+  }
+
+  // Quantity Adjuster
+  function adjustQty(delta) {
+    currentQty += delta;
+    if (currentQty < 1) currentQty = 1;
+    if (currentQty > 850) currentQty = 850;
+    const qtyElem = document.getElementById('qty-count');
+    if (qtyElem) qtyElem.textContent = currentQty;
+  }
+
+  // Favorite Toggle
+  function toggleFavorite(btn) {
+    isFavorite = !isFavorite;
+    const icon = document.getElementById('fav-icon');
+    const text = document.getElementById('fav-text');
+    if (isFavorite) {
+      icon.textContent = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-tertiary');
+      text.textContent = 'บันทึกแล้วในรายการโปรด (1.4k)';
+      showToast('บันทึกในสินค้าโปรดแล้ว ❤️');
+    } else {
+      icon.textContent = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-tertiary');
+      text.textContent = 'บันทึกเป็นสินค้าโปรด (1.4k)';
+      showToast('นำออกจากรายการโปรดแล้ว');
+    }
+  }
+
+  // Add to cart animation
+  function flyToCart() {
+    showToast('เพิ่ม ' + currentQty + ' ชิ้น ลงรถเข็นฟิ้วๆ เรียบร้อยแล้ว 🌿');
+  }
+
+  // Share action
+  function shareProduct() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Greeny BioPack - ผักตบชวากันกระแทก',
+        text: 'ดูบรรจุภัณฑ์รักษ์โลก 100% ย่อยสลายได้ในธรรมชาติบน Greeny',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      showToast('คัดลอกลิงก์สำหรับแชร์สำเร็จแล้ว');
+    }
+  }
+
+  // Bottom Tabs Switcher
+  function switchMainTab(tabKey, btnElement) {
+    document.querySelectorAll('.main-tab').forEach(t => {
+      t.classList.remove('bg-primary', 'text-on-primary', 'active', 'shadow-sm', 'font-bold');
+      t.classList.add('text-on-surface-variant');
+    });
+    btnElement.classList.add('bg-primary', 'text-on-primary', 'active', 'shadow-sm', 'font-bold');
+    btnElement.classList.remove('text-on-surface-variant');
+
+    ['reviews', 'details', 'ugc', 'shipping'].forEach(id => {
+      const panel = document.getElementById('tab-' + id);
+      if (panel) panel.classList.add('hidden');
+    });
+
+    const activePanel = document.getElementById('tab-' + tabKey);
+    if (activePanel) activePanel.classList.remove('hidden');
+  }
+
+  // Review Filters
+  function filterReviews(filterType, btnElement) {
+    document.querySelectorAll('#review-filters .rev-filter-btn').forEach(b => {
+      b.classList.remove('bg-primary', 'text-on-primary', 'active', 'font-bold');
+      b.classList.add('bg-surface-container-low', 'text-on-surface');
+    });
+    btnElement.classList.add('bg-primary', 'text-on-primary', 'active', 'font-bold');
+    btnElement.classList.remove('bg-surface-container-low', 'text-on-surface');
+    showToast('แสดงรีวิว: ' + btnElement.textContent.trim());
+  }
+
+  // Like Review Micro-interaction
+  function likeReview(btn, initialCount) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const countSpan = btn.querySelector('.like-count');
+    const hasLiked = btn.getAttribute('data-liked') === 'true';
+
+    if (!hasLiked) {
+      btn.setAttribute('data-liked', 'true');
+      btn.classList.add('text-tertiary');
+      icon.style.fontVariationSettings = "'FILL' 1";
+      countSpan.textContent = typeof initialCount === 'number' ? (initialCount + 1).toLocaleString() : '1';
+    } else {
+      btn.setAttribute('data-liked', 'false');
+      btn.classList.remove('text-tertiary');
+      icon.style.fontVariationSettings = "'FILL' 0";
+      countSpan.textContent = typeof initialCount === 'number' ? initialCount.toLocaleString() : '0';
+    }
+  }
+
+  // Video Lightbox Modal Controls
+  function playVideoModal(duration, title) {
+    const modal = document.getElementById('video-modal');
+    document.getElementById('modal-video-title').textContent = title;
+    document.getElementById('modal-video-len').textContent = duration;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById('video-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Global Toast function
+  function showToast(message) {
+    const toast = document.getElementById('app-toast');
+    const msg = document.getElementById('toast-msg');
+    msg.textContent = message;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 2800);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[20px]">eco</span></div><span class="font-headline-sm text-headline-sm text-primary font-bold">Greeny</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">แพลตฟอร์มสินค้าเกษตรรักษ์โลกและบรรจุภัณฑ์ย่อยสลายได้ 100% เชื่อมโยงเกษตรกรไทย ผู้ประกอบการ และผู้บริโภคสู่สังคมไร้ขยะพลาสติกอย่างยั่งยืน</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="font-label-md text-label-md text-secondary">มาตรฐานสิ่งแวดล้อม:</span><div class="flex gap-space-xs"><span class="bg-surface-container-low text-primary px-space-xs py-0.5 rounded text-[11px] font-bold">Bio-Degradable</span><span class="bg-surface-container-low text-primary px-space-xs py-0.5 rounded text-[11px] font-bold">Plastic-Free</span></div></div></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">ดูแลลูกค้า</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">การจัดส่งสินค้าสีเขียว</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">การคืนเงินและคืนสินค้า</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ช่องทางการชำระเงิน</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">นโยบายความเป็นส่วนตัว</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ติดต่อศูนย์ช่วยเหลือ</li></ul></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">สำหรับผู้ขาย</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">สมัครเปิดร้านค้าชุมชน</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ระบบจัดการร้านค้า Greeny</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Eco Seller Academy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">คู่มือบรรจุภัณฑ์รักษ์โลก</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ศูนย์สนับสนุนคู่ค้า</li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">การชำระเงิน &amp; ขนส่ง</h4><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline">ช่องทางชำระเงินที่ปลอดภัย</span><div class="flex flex-wrap gap-space-xs"><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">Visa</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">Mastercard</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">PromptPay</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">KBank</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">SCB</span></div></div><div class="flex flex-col gap-space-xs pt-space-xs"><span class="font-label-sm text-label-sm text-outline">พันธมิตรจัดส่งรักษ์โลก</span><div class="flex flex-wrap gap-space-xs"><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Thailand Post</span><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Kerry Eco</span><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Flash Express</span></div></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between pt-space-md bg-surface-container-lowest text-on-surface-variant"><p class="font-body-sm text-body-sm text-center sm:text-left">Copyright © 2025 Greeny Co., Ltd. สงวนลิขสิทธิ์ทุกประการ</p><div class="flex items-center gap-space-md mt-space-sm sm:mt-0 font-body-sm text-body-sm"><span class="cursor-pointer hover:text-primary transition-colors">เงื่อนไขการให้บริการ</span><span class="cursor-pointer hover:text-primary transition-colors">ความปลอดภัย</span><span class="cursor-pointer hover:text-primary transition-colors">แผนผังเว็บไซต์</span></div></div></div></footer></body></html>

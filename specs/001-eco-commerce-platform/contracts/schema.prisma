@@ -1,0 +1,256 @@
+// Prisma schema for Greeny Eco-Commerce Platform (greeny_eco_db)
+// Configured for Supabase PostgreSQL with Transaction Pooler & Direct Connection
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  BUYER
+  SELLER
+  ADMIN
+}
+
+enum PayoutMethod {
+  CARD
+  BANK
+  PROMPTPAY
+}
+
+enum MaterialType {
+  HYACINTH
+  RICE_STRAW
+  MYCELIUM
+  BAGASSE
+  CORNSTARCH
+  BANANA_STEM
+  COCONUT_COIR
+  HONEYCOMB
+  POPCORN
+}
+
+enum FlashSaleType {
+  HOURLY
+  DAILY
+  SPECIAL
+  CLEARANCE
+}
+
+enum CertificationType {
+  DISTRICT_AGRI
+  ORGANIC
+  OTOP
+  FDA
+  GAP_GMP
+  HACCP
+  OTHER
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  BANK_TRANSFER
+  PROMPTPAY
+}
+
+enum OrderStatus {
+  TO_PAY
+  TO_SHIP
+  SHIPPED
+  TO_RECEIVE
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum PostType {
+  LIVE
+  REVIEW_PHOTO
+  REVIEW_VIDEO
+  EXTERNAL_REVIEW
+}
+
+enum Visibility {
+  PUBLIC
+  FOLLOWERS
+  PRIVATE
+}
+
+enum ChatSenderRole {
+  BUYER
+  SELLER
+  AI
+  SUPPORT
+}
+
+model User {
+  id             String       @id @default(uuid())
+  email          String       @unique
+  phone          String?      @unique
+  name           String
+  role           UserRole     @default(BUYER)
+  avatarUrl      String?
+  walletBalance  Decimal      @default(0.00) @db.Decimal(12, 2)
+  carbonSavedKg  Decimal      @default(0.00) @db.Decimal(10, 2)
+  followersCount Int          @default(0)
+  followingCount Int          @default(0)
+  settingsJson   Json?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  store          Store?
+  orders         Order[]
+  socialPosts    SocialPost[]
+  comments       Comment[]
+
+  @@map("users")
+}
+
+model Store {
+  id                  String       @id @default(uuid())
+  ownerId             String       @unique
+  storeName           String
+  corporateTaxId      String?
+  taxAddressJson      Json
+  storeAddressJson    Json
+  phone               String
+  payoutMethod        PayoutMethod @default(PROMPTPAY)
+  payoutAccount       String
+  isMallVerified      Boolean      @default(false)
+  sustainabilityScore Decimal      @default(98.50) @db.Decimal(5, 2)
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+
+  owner               User         @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  products            Product[]
+  orders              Order[]
+  socialPosts         SocialPost[]
+
+  @@map("stores")
+}
+
+model Product {
+  id                String              @id @default(uuid())
+  storeId           String
+  name              String
+  description       String              @db.Text
+  materialType      MaterialType
+  usageInfo         String?             @db.Text
+  warningInfo       String?             @db.Text
+  nutritionInfo     String?             @db.Text
+  hashtags          String[]
+  images            String[]
+  retailPrice       Decimal             @db.Decimal(10, 2)
+  wholesaleTiersJson Json
+  stock             Int                 @default(100)
+  size              String?
+  flashSaleType     FlashSaleType?
+  flashSaleEndsAt   DateTime?
+  isBuyOneGetOne    Boolean             @default(false)
+  isFreeShipping    Boolean             @default(false)
+  certifications    CertificationType[]
+  certDocUrl        String?
+  soldCount         Int                 @default(0)
+  rating            Decimal             @default(5.00) @db.Decimal(3, 2)
+  carbonOffsetKg    Decimal             @default(0.45) @db.Decimal(6, 2)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  store             Store               @relation(fields: [storeId], references: [id], onDelete: Cascade)
+
+  @@index([materialType])
+  @@index([storeId])
+  @@map("products")
+}
+
+model Order {
+  id                  String        @id @default(uuid())
+  buyerId             String
+  storeId             String
+  itemsJson           Json
+  shippingAddressJson Json
+  shippingCarrier     String
+  shippingFee         Decimal       @default(0.00) @db.Decimal(10, 2)
+  discountAmount      Decimal       @default(0.00) @db.Decimal(10, 2)
+  totalAmount         Decimal       @db.Decimal(10, 2)
+  sellingFee          Decimal       @default(0.00) @db.Decimal(10, 2)
+  adFee               Decimal       @default(0.00) @db.Decimal(10, 2)
+  affiliateUserId     String?
+  affiliateFee        Decimal       @default(0.00) @db.Decimal(10, 2)
+  paymentMethod       PaymentMethod
+  status              OrderStatus   @default(TO_PAY)
+  cancelReason        String?
+  trackingCode        String?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+
+  buyer               User          @relation(fields: [buyerId], references: [id], onDelete: Restrict)
+  store               Store         @relation(fields: [storeId], references: [id], onDelete: Restrict)
+
+  @@index([buyerId])
+  @@index([storeId])
+  @@index([status])
+  @@map("orders")
+}
+
+model SocialPost {
+  id                String       @id @default(uuid())
+  authorId          String
+  storeId           String?
+  postType          PostType
+  title             String
+  caption           String       @db.Text
+  mediaUrls         String[]
+  externalSourceUrl String?
+  externalPlatform  String?
+  visibility        Visibility   @default(PUBLIC)
+  likesCount        Int          @default(0)
+  viewsCount        Int          @default(0)
+  taggedProductIds  String[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+
+  author            User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  store             Store?       @relation(fields: [storeId], references: [id], onDelete: SetNull)
+  comments          Comment[]
+
+  @@index([authorId])
+  @@index([postType])
+  @@map("social_posts")
+}
+
+model Comment {
+  id              String      @id @default(uuid())
+  postId          String
+  authorId        String
+  content         String      @db.Text
+  parentCommentId String?
+  likesCount      Int         @default(0)
+  createdAt       DateTime    @default(now())
+
+  post            SocialPost  @relation(fields: [postId], references: [id], onDelete: Cascade)
+  author          User        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  parentComment   Comment?    @relation("ThreadedReplies", fields: [parentCommentId], references: [id], onDelete: Cascade)
+  replies         Comment[]   @relation("ThreadedReplies")
+
+  @@index([postId])
+  @@map("comments")
+}
+
+model ChatMessage {
+  id                    String         @id @default(uuid())
+  sessionId             String
+  senderRole            ChatSenderRole
+  messageText           String         @db.Text
+  translatedText        String?        @db.Text
+  recommendedProductIds String[]
+  createdAt             DateTime       @default(now())
+
+  @@index([sessionId])
+  @@map("chat_messages")
+}

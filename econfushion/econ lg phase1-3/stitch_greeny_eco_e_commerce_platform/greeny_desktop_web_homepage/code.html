@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#e9f7ea", "tertiary-fixed": "#ffdad6", "on-primary-container": "#004104", "error": "#ba1a1a", "tertiary": "#b72020", "secondary-fixed": "#cfe9cf", "primary": "#006e0b", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "outline-variant": "#bdcbb5", "on-primary-fixed-variant": "#005306", "secondary-fixed-dim": "#b4cdb4", "surface-variant": "#d8e6d9", "background": "#effdef", "on-secondary-fixed": "#0b2010", "primary-container": "#2eb82e", "outline": "#6e7b68", "error-container": "#ffdad6", "on-surface-variant": "#3e4a39", "surface-bright": "#effdef", "secondary": "#4d644f", "on-primary": "#ffffff", "surface-dim": "#d0ded1", "surface-container-high": "#deecdf", "surface-container": "#e4f2e4", "on-background": "#131e16", "surface": "#effdef", "on-secondary": "#ffffff", "on-tertiary-fixed": "#410002", "surface-tint": "#006e0b", "on-primary-fixed": "#002201", "on-surface": "#131e16", "on-error-container": "#93000a", "inverse-surface": "#27332a", "on-tertiary-fixed-variant": "#93000c", "tertiary-fixed-dim": "#ffb4ab", "tertiary-container": "#ff7569", "on-tertiary-container": "#750008", "primary-fixed-dim": "#5ce153", "secondary-container": "#cde7cc", "inverse-primary": "#5ce153", "primary-fixed": "#79fe6c", "surface-container-highest": "#d8e6d9", "inverse-on-surface": "#e7f4e7", "on-secondary-container": "#516853", "on-secondary-fixed-variant": "#364c38" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "margin-desktop": "3rem", "space-xl": "2.5rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-xs": "0.25rem", "margin-tablet": "2rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Be Vietnam Pro"], "title-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,41,24,0.04)]"><div class="h-28 max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md pt-space-xs"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs" data-path="marketplace-home" href="#"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[22px]">eco</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold leading-none">Greeny</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Eco Thailand</span></div></a><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full text-on-secondary-fixed"><span class="font-body-sm text-body-sm">🇹🇭 ไทย | บาท (THB)</span><span class="material-symbols-outlined text-[16px] text-outline">keyboard_arrow_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center w-full h-11 bg-surface-container-low rounded-full px-space-md shadow-inner"><span class="material-symbols-outlined text-outline mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="ค้นหาบรรจุภัณฑ์รักษ์โลก, ผักตบ, ฟางข้าว..." type="text"/><button aria-label="Search with camera" class="flex items-center justify-center text-secondary hover:text-primary transition-colors pr-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">photo_camera</span></button><button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md px-space-md py-1.5 rounded-full transition-colors font-bold ml-space-xs shadow-sm" type="button">ค้นหา</button></div></div><div class="flex items-center gap-space-md"><a class="hidden lg:flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">คำสั่งซื้อ</span></a><a class="relative flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_cart</span><span class="font-label-md text-label-md hidden sm:inline">รถเข็น</span><span class="absolute -top-1.5 -right-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded-full min-w-[18px] text-center shadow-sm">12</span></a><a class="hidden md:flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="seller-portal" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md text-label-md">เปิดร้านค้า</span></a><button aria-label="Notifications" class="relative text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 bg-tertiary rounded-full"></span></button><a class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/40" data-path="user-profile" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">ยินดีต้อนรับ</span><span class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors leading-tight">ลงชื่อเข้าใช้ / บัญชีฉัน</span></div></a></div></div><div class="w-full flex items-center justify-between overflow-x-auto pb-space-xs"><nav class="flex items-center gap-space-xs whitespace-nowrap" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-full"><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="categories" href="#">หมวดหมู่สินค้า</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="best-sellers" href="#">สินค้าขายดี</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="greeny-lives" href="#">Greeny Lives</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="greeny-review" href="#">Greeny Review</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="flash-deals" href="#">Force Sales (ดีลพิเศษ)</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="free-shipping" href="#">ส่งฟรีทั่วไทย</a><a class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="help-center" href="#">ช่วยเหลือ/ติดต่อเรา</a></nav><div class="hidden lg:flex items-center gap-space-xs bg-secondary-container px-space-sm py-0.5 rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">verified</span><span class="font-label-sm text-label-sm text-on-secondary-container">บรรจุภัณฑ์ย่อยสลายได้ 100%</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md flex flex-col gap-space-xl">
+<!-- Hero / Promotional Banner Section -->
+<section class="relative w-full rounded-xl overflow-hidden shadow-sm bg-gradient-to-r from-surface-container to-surface-container-low min-h-[360px] md:min-h-[420px] flex items-center">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A lush, modern botanical flatlay of eco-friendly agricultural packaging made from dried water hyacinth, rice straw fibers, and pressed mushroom mycelium on clean daylight pale green surface with gentle sunlight beams, cinematic studio lighting, minimalist Thai eco packaging concept" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkN4-Uv7vucXC8jOtVfUpmmk_m0Dh17O6fbTvXle8Bg7mcFtFZfTzRBIM8nmoFx_ITlbRdAhIUSpnF8jEEiV0yXLlOLPtesmF1YgKNnb4Yuc3UVs8NB9NWKKwtVYI7wCwX9w6snEUrZZbBlHLwEZxm5MDmvwr_VqK_qdSDnO_ag_HDj1WpeMVBiwaS4ITx75VTQ-iOmPQZ5W4v1xKrANzJJYG87lJxPSVMmFDb9SgyJhNkQknCImyM')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/65 to-transparent"></div>
+</div>
+<div class="relative z-10 p-space-lg md:p-space-xl max-w-2xl flex flex-col items-start gap-space-md text-surface-container-lowest">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-sm py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">verified</span> โฆษณาพิเศษ
+          </span>
+<span class="bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm px-space-sm py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">local_shipping</span> ส่งฟรีทั่วไทย 0 บาท
+          </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary-fixed tracking-wide uppercase font-extrabold">ECO SUSTAINABILITY REVOLUTION</span>
+<h1 class="font-display-lg text-display-lg text-surface-container-lowest leading-tight">
+            Greeny รักษ์โลกตัวจริง <br/>
+<span class="text-primary-fixed">ลดสูงสุด 50%</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-lg mt-space-xs">
+            เปลี่ยนมาใช้บรรจุภัณฑ์ย่อยสลายได้ 100% เพื่อโลกวันนี้ ลดขยะพลาสติก เริ่มต้นจากพัสดุทุกกล่องของคุณ
+          </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<a class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-title-sm text-title-sm px-space-xl py-space-sm rounded-full transition-all shadow-md flex items-center gap-space-xs group" data-path="marketplace-deals" href="#">
+            ช้อปเลย
+            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<span class="font-body-sm text-body-sm text-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">compost</span> สลายตัวตามธรรมชาติใน 90 วัน
+          </span>
+</div>
+</div>
+<div class="hidden xl:flex absolute right-12 bottom-10 z-10 flex-col items-end gap-2 text-right">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-space-sm rounded-xl shadow-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">energy_savings_leaf</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-outline">ยอดลดคาร์บอนสะสม</span>
+<span class="font-title-sm text-title-sm text-on-surface">1,480,250 kg CO₂</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: Greeny Lives -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-primary-container text-on-primary-container px-space-md py-1.5 rounded-full flex items-center gap-space-xs shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest animate-ping"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest -ml-3.5"></span>
+<h2 class="font-headline-sm text-headline-sm font-bold tracking-tight">GREENY LIVES ไลฟ์สดสาธิตสินค้า</h2>
+</div>
+<span class="hidden md:inline font-body-sm text-body-sm text-secondary">ชมการทดสอบการใช้งานจริงจากเกษตรกรและผู้ผลิต</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="font-label-lg text-label-lg text-primary hover:text-on-primary-fixed-variant flex items-center gap-0.5 transition-colors" data-path="greeny-lives" href="#">
+            ดูทั้งหมด <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Live 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group/card cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300" data-alt="Thai artisan demonstrator packing fresh bakery and glass jars with natural woven dried water hyacinth padding material during a live broadcast, warm sunlight, organic textures, natural green ambient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRmtW_2gBEijmck1lpmDmR6Xy8J0eW-Yc-44tL8OKaQvd8XvQHFqYpHsEVzEr0uQCuYqRmMa8afjDn7G9PCqH9ETPduyllujJFaOGhsJbHBUECw5UlUFVQWmMsxu3DydQP-a1ld5VY0BctQvyTDhCDDxu1Ca9ZNtYTn_ItjFcCoXNlmDZtPRwj7wP1zKM9UhEEkIOLYeuDYEzaA-51gWaa0LN3YJyrP1gtVJbbfqtiHy5BbjZ02PZC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary animate-pulse"></span> LIVE
+                </span>
+<span class="bg-black/50 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 342 ผู้ชม
+                </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-black/40 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">favorite</span> 1.2k
+              </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex flex-col gap-1 text-surface-container-lowest">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-primary-container flex items-center justify-center text-[10px] text-on-primary-container font-bold">G</div>
+<span class="font-label-md text-label-md">GreenyBKK</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold line-clamp-2 leading-snug">สาธิตกันกระแทกจากผักตบชวา</h3>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-secondary truncate">กำลังสาธิต: ผักตบชวาอบแห้ง 1 กก.</span>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full transition-colors flex items-center gap-0.5">
+                รับโค้ด
+              </button>
+</div>
+</div>
+<!-- Live 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group/card cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300" data-alt="Eco-friendly packaging maker holding golden pressed rice straw cushioning pellets, demonstrating softness and shock absorption, natural light, eco agriculture workshop Thailand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDSjuDpLA0QYwTOJ2s4U12bLLq2VijiDDGW3W2O1wgRMrKxhE__5eYHO8a8cMMp35b2CEhrFipvU4mgkqs8romxwIRYrLhC1s0Tl-Cm8sGUfIyM0JW0u8H24-_Rl3BMBpKEW6oK-uLO7V9wgRgXRqgCR1BqvifhulbTolkbtM4jFh0bb5wBTWxUf8k1ClsJfpmrV2rvP41FEicq8snaNUgoPfBKFMSvc2DONTpL2rG758T2R0bP3Zs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary animate-pulse"></span> LIVE
+                </span>
+<span class="bg-black/50 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 180 ผู้ชม
+                </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-black/40 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">favorite</span> 850
+              </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex flex-col gap-1 text-surface-container-lowest">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed flex items-center justify-center text-[10px] text-on-secondary-fixed font-bold">E</div>
+<span class="font-label-md text-label-md">EcoFarm</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold line-clamp-2 leading-snug">ฟางข้าวเกรดพรีเมียมกันกระแทก</h3>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-secondary truncate">ลดกลิ่นอับ ไร้สารเคมี 100%</span>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full transition-colors flex items-center gap-0.5">
+                รับโค้ด
+              </button>
+</div>
+</div>
+<!-- Live 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group/card cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300" data-alt="Hands unboxing white mycelium mushroom molded packaging cradling ceramic tableware, showing mycelium grain structure, natural clean indoor studio setting with organic plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9sDAkGW-oxy15tQrGmMK7dvOXXrfNO1cHK_wwWgKlE0H8s8Vp_uCM35dERzSbxbtwCr9T7dJSW0-WDbJNRPAyelThSkPr5-DY9noouvzcbAuwwXWOMKQ30MAqAzZPVmot8qb2wlH73eQzYTJVHPcsClPNq0Msy7ZEJLcgIBM_6o_xER-UCFwHOkxA5t3pRjZnNk2YX4iZIhgrN5cOXXc1xuWNyiK0kuFditXRsyRyqi3SPC3kOcE-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">schedule</span> จบแล้ว
+                </span>
+<span class="bg-black/50 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+                  ย้อนหลัง
+                </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-black/40 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">favorite</span> 2.4k
+              </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex flex-col gap-1 text-surface-container-lowest">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-[10px] text-on-secondary font-bold">B</div>
+<span class="font-label-md text-label-md">BioPack</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold line-clamp-2 leading-snug">แกะกล่องเห็ดกันกระแทก ปลูกเห็ดได้ต่อ</h3>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-secondary truncate">รับชมวิดีโอย้อนหลัง 45 นาที</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+                ดูย้อนหลัง <span class="material-symbols-outlined text-[14px]">play_circle</span>
+</span>
+</div>
+</div>
+<!-- Live 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group/card cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300" data-alt="Demonstrator pulling and expanding perforated brown kraft honeycomb packaging paper wrapping glass bottle quickly with no tape required, eco store environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_SKhRFjYn4ZjenQMRWON3G_AMPuv377ZaQ62qCH8GTrUi0UlgTOh8J7tofHWxs-s11pF2kBWztpKa1gs6ANak8yH3MfxUMI_GElCdziZrOlrGtF_rYAQNq6fjQ9ZTWHSz0JQgXBs_-uMvVvclenrkdot7jSi-DUQhSe_FKUbGcp5EBxEjKfSjTJJefrSWtlLNx00WhXhuBcq7nVLC9_3LpemrZx-v83KbDypTgo6rhsJp4br9lXnP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary animate-pulse"></span> LIVE
+                </span>
+<span class="bg-black/50 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 510 ผู้ชม
+                </span>
+</div>
+<div class="absolute top-space-sm right-space-sm bg-black/40 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">favorite</span> 1.8k
+              </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex flex-col gap-1 text-surface-container-lowest">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] text-primary font-bold">P</div>
+<span class="font-label-md text-label-md">PaperGreen</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold line-clamp-2 leading-snug">กระดาษคราฟท์รังผึ้งประหยัดต้นทุน</h3>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-secondary truncate">ประหยัดพื้นที่จัดเก็บ 70%</span>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full transition-colors flex items-center gap-0.5">
+                รับโค้ด
+              </button>
+</div>
+</div>
+</div>
+<!-- Navigation Arrow Right Desktop -->
+<button aria-label="Next lives" class="hidden xl:flex absolute -right-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-surface-container-lowest shadow-lg items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all z-20">
+<span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Greeny Review (รีวิวจากผู้ใช้จริง) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-secondary-container text-on-secondary-container px-space-md py-1.5 rounded-full flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">reviews</span>
+<h2 class="font-headline-sm text-headline-sm font-bold tracking-tight">GREENY REVIEW รีวิวจากผู้ใช้จริง (UGC)</h2>
+</div>
+<span class="hidden md:inline font-body-sm text-body-sm text-secondary">ภาพถ่ายและวิดีโอแกะกล่องจริงจากลูกค้า</span>
+</div>
+<a class="font-label-lg text-label-lg text-primary hover:text-on-primary-fixed-variant flex items-center gap-0.5 transition-colors" data-path="greeny-review" href="#">
+          ทั้งหมด <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Customer photo of delicious fragile baked cookies packed safely with water hyacinth cushion inside a corrugated shipping box, undamaged and perfectly crisp, soft natural kitchen counter lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSbyapJKb63pMdQtiPyawVDNg3TPYB-ZCaBu4A6VastntbyUuOndj3ocv0V_TgiO0gI_p0W5VUJW_XDIYTIidyMIDqq7kQa0D6fKS-j8IdKu7CFUKO5NAMKhQoT4dxGpPBr488M_cBGgcksJm6J1eqButCQaKcJg1rukMGSMHve0i2Xnoi_1W0QxT_vU9wYioNSAMPc3Pmc9pAp13IaOmBWc1it5BVXeTP3TJgw2rFMCaI6MhhnfT"/>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary-fixed">photo_camera</span> รูปถ่ายสวย
+            </div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">favorite</span> 450
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px] text-amber-500 fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500 fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500 fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500 fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500 fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 font-medium">"ห่อขนมไม่แตกเลย ดีงามมาก ย่อยสลายได้จริง"</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-bold text-primary">ส</div>
+<span class="font-label-md text-label-md">สมชาย (ร้านขนมโฮมเมด)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Customer potting house plants in a terracotta container using decomposed cornstarch foam mixed with rich garden soil, green sprouts flourishing, bright daylight garden setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNRWzdUT7Yx1EWBa9I34x4wu6NJghYZc3298rK9pcVBuGecQezVsS0Y2vCP43wyEQUgmY5tA67W5SRLOsDGO7iLv8gssaRi0jvp3twmOJnGs1DEwcKEw6h6FCmXgLY2LzVj9Hhk9aPTS3VdTbA46-2BuB27tnBB1WeP2fPDnnE0Bd_GQcHl6sIqgjoCBJiedqSFtSdMgx7A0oVtdstbsZ_c6_DpBosMJDEzTRXuQo2kc6qiDH-J4ob"/>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary-fixed">photo_camera</span> รูปถ่ายสวย
+            </div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">favorite</span> 630
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 font-medium">"ย่อยสลายได้จริง ปลูกต้นไม้โตเร็ว"</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-bold text-primary">น</div>
+<span class="font-label-md text-label-md">นิดา (Plant Lover)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Customer recorded slow-motion video frame dropping a parcel from height onto floor, showing the resilient cushion of mushroom packaging protecting ceramic mug, bright clean test lab environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkSZrOwm81HRO02J3AieMwTPNJGeAtH8lHTJApaAXYV2bkiQcQG2kyQYozkQCsMLAC5kl95rJpDinNM87OHlao_zm0xC97887Q86eP7RFRwJKX8ds0NfGJAvlqC1bo9qpB1twxZHvJCKhfGnMVD3mSTgQ8R8HVSiTTiHQiWXpHMAiz_VTsdzeRyUaxU1NiofzEwr8squ-noTXdmgsaylnypUp3_XkwDF7PAhUCfJ01Sc76P6lOFFy"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/90 flex items-center justify-center text-primary shadow-md">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">videocam</span> วิดีโอรีวิว
+            </div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">favorite</span> 1.8k
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 font-medium">"ทดสอบโยนกล่อง ไม่แตก! คุ้มราคา"</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-bold text-primary">ก</div>
+<span class="font-label-md text-label-md">กอล์ฟ (ผู้ส่งออกเซรามิก)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-52 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Customer unboxing video frame showing aesthetic brown kraft parcel wrapped with green natural twine rope and personalized botanical thank you card, lifestyle aesthetic, soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnYYRwYQr6CI_1DQBxjqRwreoflNgcpdHX5Cn6A3XhrVnWbf9yzumJpw4s07OvhVqnHToXyUNlnnuDLOBYFrIpM6m7Q5k4Qor6lBmbPTnxJfZ3HmnOLGxz7PGUc3ueV8tWbEemrp5lAQm8X7Tt8A6Zpm4h-YbmNXO25oirZwlpL6Q4pprmRjSZ9z1yzEtclam8DpU11Vd5hkkMVoSoxE1udUDLOKGLnczHdxa2igDuSX5Yk8aknQ_"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/90 flex items-center justify-center text-primary shadow-md">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">videocam</span> วิดีโอรีวิว
+            </div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">favorite</span> 920
+            </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 font-medium">"แพ็คเกจสวย ลูกค้าชอบและชื่นชมมาก"</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-bold text-primary">แ</div>
+<span class="font-label-md text-label-md">แอน (Organic Skincare)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Force Sales (ดีลเร่งด่วน ประจำวัน) -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="bg-tertiary text-on-tertiary px-space-md py-1.5 rounded-full flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+<h2 class="font-headline-sm text-headline-sm font-bold tracking-tight">Force Sales ดีลเร่งด่วน ประจำวัน</h2>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-bold font-title-sm text-title-sm bg-tertiary-fixed px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span id="countdown-timer">00:59:45</span>
+</div>
+</div>
+<a class="font-label-lg text-label-lg text-tertiary hover:text-on-tertiary-container flex items-center gap-0.5 transition-colors font-bold" data-path="flash-deals" href="#">
+          ดูดีลทั้งหมด <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Deal 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Sturdy corrugated shipping box woven from natural dried water hyacinth fiber pulp, clean aesthetic e-commerce packaging, studio lighting with light eco green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvjnrW6InLbUrBeZzUA83o329Wo-h6emZWvwgwHvnQ5uNbsRKFIaEtbIJzDRznObTTYTdHuxKHU5NKczh1Q5iFzjfzkcRBfP8y66RQ3hx-Ep5RvHoiYueu4M2t2aqGUSjKO1FggnqO_rKgFVeETLtiUA9Ai8mKij0AhI2_bIsa4LoOEf2VdJkqzHiufkfR3GQwQ1U4dxrNNbEWP-L_AG9cQb0pPRbMb8m1LHZjhTU_KapoM7wb3Dfj"/>
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                -58%
+              </div>
+<div class="absolute top-2 right-2 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">alarm</span> ภายใน 1 ชม.
+              </div>
+</div>
+<div class="flex items-center gap-1 pt-1">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Mall</span>
+<span class="font-body-sm text-body-sm text-secondary">EcoHyacinth TH</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface line-clamp-1">กล่องพัสดุผักตบชวา</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold">฿29</span>
+<span class="font-body-sm text-body-sm text-outline line-through">฿69</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[85%]"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>ขายแล้ว 85%</span>
+<span class="text-tertiary font-bold">ด่วน! ใกล้หมด</span>
+</div>
+<button class="w-full bg-tertiary hover:bg-on-tertiary-container text-on-tertiary font-label-md text-label-md py-2 rounded-full transition-colors flex items-center justify-center gap-1 shadow-sm font-bold mt-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> ซื้อเลย
+            </button>
+</div>
+</div>
+<!-- Deal 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Roll of biodegradable natural kraft paper adhesive tape activated with natural starch water, clean eco-friendly e-commerce product mockup, daylight background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgpPe4y7oP9gmDAFnnRBcgdUB9VX3qDxlFF4tCYp2iij8ftMgFhcqguGhRVvc4dgd0CkBTlJvSDmks9vZZ_oEt06pqEMusT0C6odbHa5ZpmIj4sfWd7JF1FRTuSjmoOe0zC_U022OkPaBPMMMePq311kcNKuecFT20jTVD6WNdmnJYH8AhZ4ctlWrjSeT9ijVtlxHtc941VnqP6VVyp_HWU5_9c7zZSN-_0YmdpKygUhsCQLMozzmh"/>
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                -50%
+              </div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> ภายในวันนี้
+              </div>
+</div>
+<div class="flex items-center gap-1 pt-1">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Mall</span>
+<span class="font-body-sm text-body-sm text-secondary">TapeMaster</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface line-clamp-1">เทปกระดาษกาวคราฟท์</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold">฿45</span>
+<span class="font-body-sm text-body-sm text-outline line-through">฿90</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[60%]"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>ขายแล้ว 60%</span>
+<span class="text-secondary">เหลือ 24 ชม.</span>
+</div>
+<button class="w-full bg-tertiary hover:bg-on-tertiary-container text-on-tertiary font-label-md text-label-md py-2 rounded-full transition-colors flex items-center justify-center gap-1 shadow-sm font-bold mt-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> ซื้อเลย
+            </button>
+</div>
+</div>
+<!-- Deal 3 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Cushioning sheets made from cornstarch foam bubbles, white soft texture, organic plastic-free air bubble alternative, isolated on crisp daylight studio set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa0ynZ63Ym_WUq6OSfSwZepCNKpgg3aBqnqHm5Xu610mj5jsNywP-jPzPgyWOnD3unWiCUbKDePcvfhKl5-pnWE7RCm_er9q1c-usK_vQfWOxCjm5RpqLHRJ_fLiCy283C8y8MEDXDd-7iM4QUL6upsf3gD7HSqaNGrPb7s59c9BX5gZJH2HNA7_p-lC0-Owmm_p12ph2hoPmFvAKqW9SHAkneUIQrCIZLnMLfzapttG4K2Hvzvqai"/>
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                -40%
+              </div>
+<div class="absolute top-2 right-2 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">calendar_today</span> เหลืออีก 6 วัน
+              </div>
+</div>
+<div class="flex items-center gap-1 pt-1">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Mall</span>
+<span class="font-body-sm text-body-sm text-secondary">CornPack</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface line-clamp-1">แผ่นกันกระแทกข้าวโพด</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold">฿89</span>
+<span class="font-body-sm text-body-sm text-outline line-through">฿150</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[40%]"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>ขายแล้ว 40%</span>
+<span class="text-secondary">โปรโมชั่นสัปดาห์</span>
+</div>
+<button class="w-full bg-tertiary hover:bg-on-tertiary-container text-on-tertiary font-label-md text-label-md py-2 rounded-full transition-colors flex items-center justify-center gap-1 shadow-sm font-bold mt-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> ซื้อเลย
+            </button>
+</div>
+</div>
+<!-- Deal 4 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Biodegradable postal mailer poly mailer made of cassava starch with leaf logo printed in soy ink, soft matte mint green texture, studio daylight setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCExbdEwzjgWPTr1W_F6Nyx4kLta5CryTR64vkg3IGiVD8ogkWZUdC0cxxQ6jNtrS6TLr7bRpZbTlQ0-suzJgx7WHAYlkPcTGhM6oBPgTWePExn_mi9NfPoZZAyxI0OgEwtyhZjZJ7jBME3vZQ5O_tT-c46gkLEXVo0TkkcKAMPj-HstnJpnm7KEAC2cIQOffyP6EiAko8mxY98jpjZTHCvn59eHzTIrg_gAMha9UMPH2_mtSAlO7F5"/>
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                -62%
+              </div>
+<div class="absolute top-2 right-2 bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span> เหลือ 5 ชิ้น
+              </div>
+</div>
+<div class="flex items-center gap-1 pt-1">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">Mall</span>
+<span class="font-body-sm text-body-sm text-secondary">BioMailer</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface line-clamp-1">ซองไปรษณีย์แป้งมัน</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold">฿19</span>
+<span class="font-body-sm text-body-sm text-outline line-through">฿50</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[94%]"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>ขายแล้ว 94%</span>
+<span class="text-tertiary font-bold">สต็อกใกล้หมด!</span>
+</div>
+<button class="w-full bg-tertiary hover:bg-on-tertiary-container text-on-tertiary font-label-md text-label-md py-2 rounded-full transition-colors flex items-center justify-center gap-1 shadow-sm font-bold mt-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> ซื้อเลย
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Daily Product Discovery (สินค้าแนะนำ) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
+            สินค้าแนะนำประจำวัน
+          </h2>
+<span class="font-body-sm text-body-sm text-secondary hidden sm:inline">คัดสรรเพื่อธุรกิจรักษ์โลกที่คุ้มค่าที่สุด</span>
+</div>
+<!-- Category Tab Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2">
+<button class="px-space-md py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm whitespace-nowrap">
+            สินค้าแนะนำ
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm">
+            ซื้อ 1 แถม 1
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm">
+            ส่งฟรี 0 บาท
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm">
+            สินค้าขายดี
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm">
+            สินค้าใหม่
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm">
+            สินค้าเพื่อคุณ
+          </button>
+</div>
+</div>
+<!-- 6-Column Desktop Product Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm md:gap-space-md">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Dense extruded puffed cylindrical rice straw packaging pellets, golden straw color, safe eco friendly packing filler, clean white surface, high resolution product photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs6yBVQ48rnKXvVpMWmFStV3HbfPAek_KSsWAZVUcIcTij24JygmKd_FHc1W4RMuV2_CsRGyUi1tGrWT-biKXNRwHBM8rMCipLgw4AkAoojv3u0BJlAdBcF9yZSo_0naYa3qeTe0hKKJKJ3nrNYLbqTz3DF5mq5bm6wIUU76Uqb6wN-0TYEgieByQODuoi6mUrNQwXV6j4l4Apvokxq20zaXksIFNm8Y12XCEWGkkWthNajLlHVxRR"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-10%</span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">ThaiBioPack</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                ฟางข้าวอัดแท่งกันกระแทก ชนิดเม็ดฟู ย่อยสลาย 100%
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿125</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 1.4พัน</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Sun-dried shredded natural water hyacinth sterilized fiber strands packaged in transparent breathable bag, 500g, eco packaging cushion material, natural studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFYD_RK6Z4Fd1lXYJaxbY8A_EtWxIbZGiJdCRnu6NWKd05NA5Sk16ygQvIhYp3iXgsfKA9B2wFba27b6c2ZnVU2GenDJeTYrMFWj0nfgGvbvr9K2n36BAfckg9u_dMFx7qpPx9n64G03GfDRxBaQc-BcwNlfrDSC1gQpLiVY_1owPQuI38DFkJ56H8F3KGENuMgoo7OtdijEPZzStS9nook0FdCJjem46LxPTTX8XK5fejZSaDCiSU"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-15%</span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">GreenRiver</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                ผักตบชวาตากแห้งอบฆ่าเชื้อ ไร้ฝุ่นละออง 500g
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿75</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 3.8พัน</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Rigid 3-layer honeycomb kraft cardboard postal shipping box open showing strong hexagonal structural lining, heavy duty durable eco shipping carton" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLNmyK4mRS4C4XOpvh46RP6eSxPmi2JSB_jlHuc6rt5_TGKU7iE2obVdFf8z1WEIQMF-VrhQ2NBfd8zCpTGSWyh6Ljw_Dry0jKO1z6dnCgDbwiSK2tZqdM0ewnAV1rtDk-co0XAPNeqKhPlO_yxL9C2xIhK_0N_3AV0Nbggsg_2kRZ9ilQHK2b2cNt5Jgjin6CQsALJqdXaZJ4TT-AYENd4MG9fkTg6qF0VrvHkYmBq0bEp0bLbSFH"/>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">HoneycombBox</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                กล่องไปรษณีย์รังผึ้ง ยุบตัวยาก กันกระแทก 3 ชั้น
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿18</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 8.2พัน</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 5.0
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Engineered organic molded mushroom mycelium packaging corner protectors and custom bottle casing, velvet white botanical organic material, studio product shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHTxEBluv3rQ3czGSQa_rEQ94_M70Ap1WBk_zNKxKpOEqj4dTgVZQLKcQ5DY7OYEKeNNTGnoMxSkPgHF2EB-rgcAD7HGkib6LWOp8yTn9BpQmEzsK5K-g6_xuvKkbuLbUn9KfuYyR7Ap3cvk1rvH1WEPHkWA0bJkz1tFG1JQqd8C134v4pEwND3WaWm_WsLFZjOCgB2kcYVqS1pDO4kjZCfu6yowXlU4EWkQ9VgEEX360_IvJquoM"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-20%</span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">MycoPack Tech</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                โฟมขึ้นรูปจากเส้นใยเห็ด (Mushroom Packaging)
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿210</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 520</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Lightweight colorful loose fill packaging peanut chips made of natural cornstarch and potato starch dissolving instantly in water glass beaker, studio test lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGh9DoioLfwf8PBx7-JGqyvED-FOnbKpf9kSrajBTf0QdzubiT1OS7VrVSCgg43X3iECTZ5c1kiIttZyD0YriERmOMMbYfCfyPmRIonfkZWUKNf9qJX6iWocyQsQLlbT1m9z9gTygAHsHm245PZonc0j5K1vujB5WdSugDxbm5tfNYY6iChAf157QrFt71rwWKBZLziS3UN0NqHqp-HQuvBEgdjLUx43me_vM2I27zhPwSteBePUhz"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-10%</span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">BioFoam Siam</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                เม็ดโฟมแป้งข้าวโพดย่อยสลายด้วยน้ำ
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿95</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 2.1พัน</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.7
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" data-alt="Neat coil of natural hand-twisted banana stem fiber string twine cord tied around eco mailer gift box, rustic organic Thai handmade packaging craft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsf2TbHn7Mp6uyriHOaliB1NgyldkuKLkm4xPV_rnnXL909mVx2ONsSP2e31pG7qhGFqNlGu-zHolEvjE0130FzCAw5utoJPdfPumaPDLL2GfDOVBYy1L5c5G65NO7vN9gvr1J_IAUmaApcm8gf2fvWrptAvs8hCRmiuzUdaSdz1K_-oSj-cs_ILAgg9ULVUrrHI3gKsutUoB5F-woh-vnqvR2O7pEjUbX-kFil0rVbV2RgHxhKzjb"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">-12%</span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 text-secondary hover:text-tertiary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1 py-0.2 rounded font-bold text-[10px]">Mall</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">BananaFiber TH</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight">
+                เชือกกล้วยธรรมชาติมัดกล่องพัสดุเหนียวพิเศษ
+              </h3>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-title-sm text-title-sm text-primary font-extrabold">฿35</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ขายแล้ว 4.5พัน</span>
+<span class="flex items-center gap-0.5 text-amber-500 font-bold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More / Discovery Button -->
+<div class="flex justify-center pt-space-sm">
+<button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-title-sm text-title-sm px-space-xl py-space-sm rounded-full shadow-sm transition-all flex items-center gap-space-xs">
+          ดูสินค้าเพิ่มเติมอีก 200+ รายการ
+          <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Eco Commitment Trust Banner -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">recycling</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md font-bold text-on-surface">การันตีวัสดุธรรมชาติจากวิสาหกิจชุมชนไทย 100%</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ทุกคำสั่งซื้อสนับสนุนเกษตรกรในประเทศ และลดการปล่อยคาร์บอนสู่ชั้นบรรยากาศอย่างแท้จริง</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="bg-primary text-on-primary hover:bg-on-primary-container font-label-md text-label-md px-space-lg py-2.5 rounded-full transition-colors font-bold whitespace-nowrap shadow-sm" data-path="about-standards" href="#">
+          เรียนรู้มาตรฐาน Greeny
+        </a>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Simple countdown ticker simulation for Force Sales
+  (function() {
+    var timerEl = document.getElementById('countdown-timer');
+    if (!timerEl) return;
+    var totalSeconds = 59 * 60 + 45;
+    setInterval(function() {
+      if (totalSeconds <= 0) totalSeconds = 3600;
+      totalSeconds--;
+      var hrs = Math.floor(totalSeconds / 3600);
+      var mins = Math.floor((totalSeconds % 3600) / 60);
+      var secs = totalSeconds % 60;
+      var str = 
+        (hrs < 10 ? '0' + hrs : hrs) + ':' +
+        (mins < 10 ? '0' + mins : mins) + ':' +
+        (secs < 10 ? '0' + secs : secs);
+      timerEl.textContent = str;
+    }, 1000);
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[20px]">eco</span></div><span class="font-headline-sm text-headline-sm text-primary font-bold">Greeny</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">แพลตฟอร์มสินค้าเกษตรรักษ์โลกและบรรจุภัณฑ์ย่อยสลายได้ 100% เชื่อมโยงเกษตรกรไทย ผู้ประกอบการ และผู้บริโภคสู่สังคมไร้ขยะพลาสติกอย่างยั่งยืน</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="font-label-md text-label-md text-secondary">มาตรฐานสิ่งแวดล้อม:</span><div class="flex gap-space-xs"><span class="bg-surface-container-low text-primary px-space-xs py-0.5 rounded text-[11px] font-bold">Bio-Degradable</span><span class="bg-surface-container-low text-primary px-space-xs py-0.5 rounded text-[11px] font-bold">Plastic-Free</span></div></div></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">ดูแลลูกค้า</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">การจัดส่งสินค้าสีเขียว</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">การคืนเงินและคืนสินค้า</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ช่องทางการชำระเงิน</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">นโยบายความเป็นส่วนตัว</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ติดต่อศูนย์ช่วยเหลือ</li></ul></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">สำหรับผู้ขาย</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">สมัครเปิดร้านค้าชุมชน</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ระบบจัดการร้านค้า Greeny</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Eco Seller Academy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">คู่มือบรรจุภัณฑ์รักษ์โลก</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">ศูนย์สนับสนุนคู่ค้า</li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-title-sm text-title-sm text-on-surface font-bold mb-space-xs">การชำระเงิน &amp; ขนส่ง</h4><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline">ช่องทางชำระเงินที่ปลอดภัย</span><div class="flex flex-wrap gap-space-xs"><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">Visa</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">Mastercard</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">PromptPay</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">KBank</span><span class="bg-surface-container px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface">SCB</span></div></div><div class="flex flex-col gap-space-xs pt-space-xs"><span class="font-label-sm text-label-sm text-outline">พันธมิตรจัดส่งรักษ์โลก</span><div class="flex flex-wrap gap-space-xs"><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Thailand Post</span><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Kerry Eco</span><span class="bg-surface-container-low text-secondary px-space-xs py-1 rounded font-label-sm text-label-sm">Flash Express</span></div></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between pt-space-md bg-surface-container-lowest text-on-surface-variant"><p class="font-body-sm text-body-sm text-center sm:text-left">Copyright © 2025 Greeny Co., Ltd. สงวนลิขสิทธิ์ทุกประการ</p><div class="flex items-center gap-space-md mt-space-sm sm:mt-0 font-body-sm text-body-sm"><span class="cursor-pointer hover:text-primary transition-colors">เงื่อนไขการให้บริการ</span><span class="cursor-pointer hover:text-primary transition-colors">ความปลอดภัย</span><span class="cursor-pointer hover:text-primary transition-colors">แผนผังเว็บไซต์</span></div></div></div></footer></body></html>

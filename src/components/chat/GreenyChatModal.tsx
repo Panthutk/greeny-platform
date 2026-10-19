@@ -144,11 +144,13 @@ export function GreenyChatModal({ isOpen, onClose, initialMode = "AI" }: GreenyC
     },
   ]);
 
+  const [isAiThinking, setIsAiThinking] = useState(false);
+
   if (!isOpen) return null;
 
-  const handleSendAi = (textToSend?: string) => {
+  const handleSendAi = async (textToSend?: string) => {
     const query = textToSend || inputText;
-    if (!query.trim()) return;
+    if (!query.trim() || isAiThinking) return;
 
     const userMsg: Message = {
       id: `usr-${Date.now()}`,
@@ -159,10 +161,30 @@ export function GreenyChatModal({ isOpen, onClose, initialMode = "AI" }: GreenyC
 
     setAiMessages((prev) => [...prev, userMsg]);
     setInputText("");
+    setIsAiThinking(true);
 
-    // Simulate AI analysis
-    setTimeout(() => {
-      const isFragile = query.includes("ขวดแก้ว") || query.includes("แก้ว") || query.includes("แตก") || query.includes("15kg") || query.includes("15 กก");
+    try {
+      const res = await fetch("/api/chat/ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+      });
+
+      if (!res.ok) throw new Error("API call failed");
+
+      const data = await res.json();
+      const aiReply: Message = {
+        id: `ai-${Date.now()}`,
+        sender: "AI",
+        text: data.analysis || "ระบบได้วิเคราะห์บรรจุภัณฑ์ที่เหมาะสมสำหรับสินค้าของคุณเรียบร้อยแล้ว",
+        recommendedProducts: data.recommendedProducts || [],
+        timestamp: new Date().toLocaleTimeString("th-TH", { hour: "2-digit", minute: "2-digit" }),
+      };
+
+      setAiMessages((prev) => [...prev, aiReply]);
+    } catch (err) {
+      // Fallback in case of network issue
+      const isFragile = query.includes("แก้ว") || query.includes("แตก") || query.includes("15kg");
       const knowledge = isFragile ? AI_KNOWLEDGE_BASE.glass : AI_KNOWLEDGE_BASE.default;
 
       const aiReply: Message = {
@@ -174,7 +196,9 @@ export function GreenyChatModal({ isOpen, onClose, initialMode = "AI" }: GreenyC
       };
 
       setAiMessages((prev) => [...prev, aiReply]);
-    }, 600);
+    } finally {
+      setIsAiThinking(false);
+    }
   };
 
   const handleSendSupport = () => {
@@ -314,6 +338,18 @@ export function GreenyChatModal({ isOpen, onClose, initialMode = "AI" }: GreenyC
                   </div>
                 </div>
               ))}
+
+              {isAiThinking && (
+                <div className="flex gap-3 justify-start animate-in fade-in duration-200">
+                  <div className="w-8 h-8 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-xs">
+                    <span className="material-symbols-outlined text-[18px] animate-spin">smart_toy</span>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-surface-container-lowest text-on-surface shadow-xs border border-outline-variant/30 rounded-tl-xs flex items-center gap-2 text-xs">
+                    <span className="inline-block w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                    <span>Greeny AI กำลังวิเคราะห์คุณสมบัติวัสดุและค้นหาผลิตภัณฑ์ที่เหมาะสม...</span>
+                  </div>
+                </div>
+              )}
 
               {/* Quick AI Suggestion Chips */}
               <div className="pt-2 border-t border-outline-variant/20">

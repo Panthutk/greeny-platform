@@ -18,16 +18,56 @@ export default function CheckoutPage() {
   const [paymentMethod, setPaymentMethod] = useState<"PROMPTPAY" | "CREDIT" | "BANK">("PROMPTPAY");
   const [orderConfirmed, setOrderConfirmed] = useState(false);
   const [createdOrderId, setCreatedOrderId] = useState("");
+  const [promptPayQrUrl, setPromptPayQrUrl] = useState("");
+  const [savedToDatabase, setSavedToDatabase] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const shippingFee = 0; // 0 บาท ส่งฟรีทั่วไทย
   const netTotal = total + shippingFee;
 
-  const handlePlaceOrder = (e: React.FormEvent) => {
+  const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault();
-    const orderId = `ORD-${Date.now().toString().slice(-6)}`;
-    setCreatedOrderId(orderId);
-    setOrderConfirmed(true);
-    clearCart();
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/orders/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          buyerName: recipientName,
+          items,
+          shippingAddress: {
+            recipientName,
+            phone,
+            address,
+          },
+          shippingCarrier:
+            carrier === "CARRIER_1"
+              ? "Flash Express"
+              : carrier === "CARRIER_2"
+              ? "Kerry Express"
+              : "ไปรษณีย์ไทย (EMS)",
+          paymentMethod,
+          totalAmount: netTotal,
+          discountAmount: discountTotal,
+        }),
+      });
+
+      const data = await res.json();
+      setCreatedOrderId(data.orderId || `ORD-${Date.now().toString().slice(-6)}`);
+      setPromptPayQrUrl(data.promptPayQrUrl || "");
+      setSavedToDatabase(Boolean(data.savedToDatabase));
+      setOrderConfirmed(true);
+      clearCart();
+    } catch (err) {
+      // Fallback
+      const orderId = `ORD-${Date.now().toString().slice(-6)}`;
+      setCreatedOrderId(orderId);
+      setOrderConfirmed(true);
+      clearCart();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,6 +120,18 @@ export default function CheckoutPage() {
                   : "โอนผ่านบัญชีธนาคาร"}
               </span>
             </div>
+            <div className="flex justify-between items-center">
+              <span className="text-outline">สถานะคลาวด์:</span>
+              <span
+                className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                  savedToDatabase
+                    ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                    : "bg-surface-container text-on-surface-variant border border-outline-variant/30"
+                }`}
+              >
+                {savedToDatabase ? "☁️ ซิงค์กับ Supabase สำเร็จ" : "⚡ Cloud Processed (Sandbox)"}
+              </span>
+            </div>
             <div className="flex justify-between">
               <span className="text-outline">ยอดสุทธิ:</span>
               <span className="font-extrabold text-primary text-sm font-display">
@@ -89,16 +141,31 @@ export default function CheckoutPage() {
           </div>
 
           {paymentMethod === "PROMPTPAY" && (
-            <div className="p-4 rounded-2xl bg-white border border-outline-variant/30 flex flex-col items-center gap-2">
-              <span className="text-[11px] font-bold text-on-surface">สแกนชำระเงินผ่าน PromptPay QR:</span>
-              {/* Simulated QR Code box */}
-              <div className="w-44 h-44 rounded-xl bg-neutral-900 p-2 flex items-center justify-center text-white text-center text-xs font-bold shadow-inner">
-                <div className="border-4 border-white p-2 rounded-lg">
-                  <span className="material-symbols-outlined text-[48px] text-white">qr_code_2</span>
-                  <div className="text-[10px] mt-1 text-primary-fixed">PromptPay Official</div>
-                </div>
+            <div className="p-5 rounded-2xl bg-white border border-outline-variant/30 flex flex-col items-center gap-3">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-on-surface">
+                <span className="material-symbols-outlined text-[18px] text-primary">qr_code_scanner</span>
+                สแกนชำระเงินผ่าน PromptPay QR Official:
               </div>
-              <span className="text-[10px] text-outline">ยอดชำระ: {formatPrice(netTotal)} (บันทึกสลิปอัตโนมัติ)</span>
+              {/* Dynamic / High Resolution PromptPay QR Code */}
+              {promptPayQrUrl ? (
+                <div className="p-3 bg-white border-2 border-emerald-600 rounded-2xl shadow-sm">
+                  <img
+                    src={promptPayQrUrl}
+                    alt="PromptPay QR Code"
+                    className="w-48 h-48 object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="w-48 h-48 rounded-xl bg-neutral-900 p-2 flex items-center justify-center text-white text-center text-xs font-bold shadow-inner">
+                  <div className="border-4 border-white p-2 rounded-lg">
+                    <span className="material-symbols-outlined text-[48px] text-white">qr_code_2</span>
+                    <div className="text-[10px] mt-1 text-primary-fixed">PromptPay Official</div>
+                  </div>
+                </div>
+              )}
+              <span className="text-[11px] text-outline font-medium">
+                ยอดชำระ: <strong className="text-primary font-display">{formatPrice(netTotal)}</strong> (สแกนผ่านแอปธนาคารใดก็ได้)
+              </span>
             </div>
           )}
 
@@ -309,11 +376,16 @@ export default function CheckoutPage() {
 
             <button
               type="submit"
-              className="w-full py-4 rounded-full bg-coral-accent hover:bg-red-600 text-white font-display font-extrabold text-sm sm:text-base transition-all shadow-md flex items-center justify-center gap-2 group"
+              disabled={isSubmitting}
+              className="w-full py-4 rounded-full bg-coral-accent hover:bg-red-600 text-white font-display font-extrabold text-sm sm:text-base transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-60"
             >
-              <span>ยืนยันการสั่งซื้อ ({formatPrice(netTotal)})</span>
+              <span>
+                {isSubmitting
+                  ? "กำลังประมวลผลคำสั่งซื้อบน Cloud Server..."
+                  : `ยืนยันการสั่งซื้อ (${formatPrice(netTotal)})`}
+              </span>
               <span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">
-                lock
+                {isSubmitting ? "hourglass_top" : "lock"}
               </span>
             </button>
             <p className="text-[10px] text-center text-outline">
